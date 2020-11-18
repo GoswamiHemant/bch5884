@@ -82,6 +82,6 @@ plt.show()
 
 #Print the boundaries where peaks start and end in the chromatogram
 
-print ("The start points of peak I, II, III and IV are ", Peak_start, "respectively")
+print ("The peaks I, II, III and IV begin at ", Peak_start, " minutes, respectively")
 
-print ("The end points of peak I, II, III and IV are ", Peak_end, "respectively")
+print ("The peak I, II, III and IV end at ", Peak_end, " minutes, respectively")
