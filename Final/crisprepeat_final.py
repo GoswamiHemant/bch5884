@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+#Hemant Goswami
 
 import matplotlib.pyplot as plt
 from  matplotlib.pyplot import rcParams
@@ -95,19 +96,24 @@ for length in length_list:
     plt.savefig("23ntdrepeats.png", format="png")
     plt.show()
 
-#similarly we can search for repeats of any length. Because CRISPR repeats are usually 21-35 bases long, so I would search for all the 21-35 bases. However, here I am just searching 21-23 
+#similarly we can search for repeats of any length. Because CRISPR repeats are usually 21-35 bases long, so I would search for all the 21-35 bases. However, here I am just searching 21-23 bases long repeats. 
 
-
+#writing html file
 def writehtml():
 	f=open("hem_CRISPR_repeat_finder.html", 'w')
 	f.write("<DOCTYPE html>")
 	f.write("<html>")
 	f.write("<head>")
+	f.write("<style> body { background:lightblue; } \n")
+	f.write("</style>\n")
 	f.write("<h1> CRISPR repeat analysis in Sulfolobus sulfotaricus genomic DNA sequence </h1>\n")
 	f.write("</head>")
 	f.write("<body>\n")
-	f.write("<p>  My interest lies in understanding the structure and function of novel type V CRISPR-Cas proteins. CRISPR stands for Clustered Regularly Interspaced Short Palindromic Sequence. An evolutionalary struggle of billions of years between prokaryotes and viruses have led to the development of adaptive immune system in bacteria. CRISPR-Cas based immunity is found in 90% of archaea and 50% of bacteria. Based on the CRISPR-Cas loci, CRISPR Cas systems have been classified into six distinct types and each uses a set of special Cas proteins for DNA interference. Type I and type III CRIPPR systems employs a multi-protein complex for crRNA binding and DNA cleavage, while type II (Cas9) and type V CRISPR (Cas12) systems utilize a single protein, that recognizes its crRNA and cleaves the target DNA. Cas9 protein uses a distinct domain, HNH or RuvC, to cleave each strand of DNA while Cas12 uses just RuvC domain to cleave both the strands of DNA.  </p>")
-	#f.write("<p> 
+	f.write("<p>  My research involves the structural and biochemical cjaracterization of  of novel type V CRISPR-Cas proteins. CRISPR stands for Clustered Regularly Interspaced Short Palindromic Sequence. An evolutionalary struggle of billions of years between prokaryotes and viruses have led to the development of adaptive immune system in bacteria. CRISPR-Cas based immunity is found in 90% of archaea and 50% of bacteria. Based on the CRISPR-Cas loci, CRISPR Cas systems have been classified into six distinct types and each uses a set of special Cas proteins for DNA interference. Type I and type III CRIPPR systems employs a multi-protein complex for crRNA binding and DNA cleavage, while type II (Cas9) and type V CRISPR (Cas12) systems utilize a single protein, that recognizes its crRNA and cleaves the target DNA. Cas9 protein uses a distinct domain, HNH or RuvC, to cleave each strand of DNA while Cas12 uses just RuvC domain to cleave both the strands of DNA. </p>\n")
+	f.write("<p> Recently I found that Sulfolobus sulfotaricus contains DNA sequesnce similar to Cas12 genes. So to verify if these sequences are really Cas protein genes, we want to identify the CRISPR repeats downstream of promising Cas genes because these repeats are an integral part of CRISPR-Cas array. </p>\n")
+	f.write('<p> <img src="21ntdrepeats.png"> </p>')
+	f.write('<p> <img src="22ntdrepeats.png"> </p>')
+	f.write('<p> <img src="23ntdrepeats.png"> </p>')
 	f.write("</body>")
 	f.write("</html>")
 	f.close()
